@@ -46,8 +46,6 @@ ON
 	experiences."endDate" IS NULL
 JOIN users
 ON experiences."userId" = users.id
-JOIN jobs
-ON jobs."companyId" = companies.id
 JOIN roles
-ON roles.id = jobs."roleId"
+ON roles.id = experiences."roleId"
 WHERE users.id = 50;
